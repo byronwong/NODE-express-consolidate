@@ -2,10 +2,9 @@
   "name": "2018-starter",
   "version": "1.0.0",
   "description": "Starter kit for 2018",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "prestart": "npx babel-node app.js",
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "del ./node_modules"
   },
@@ -15,8 +14,10 @@
   "author": "Byron Wong",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "chalk": "^2.4.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.2.8"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

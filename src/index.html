@@ -9,20 +9,21 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <title>Node Express</title>
-
-  <!-- React Scripts -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-
-  <!-- Don't use this in production: -->
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
 
   <h1>Node and Express</h1>
-  <div id="root"></div>
-
-  <script type="text/babel" src="js/main.js"></script>
+  <main id="root">
+    <ol>
+      <li><a href="/books">Routing: GET --> /books</a></li>
+      <li><a href="/books/single">Routing: GET --> /books/single</a></li>
+      <li><a href="/shop">Routing: GET --> /shop</a></li>
+      <li><a href="/shop/single">Routing: GET --> /shop/single</a></li>
+      <li><a href="/books/single/foo">Routing: GET --> /books/single/:params</a></li>
+      <li><a href="/api">API</a></li>
+    </ol>
+  </main>
+  <script src="js/index.js"></script>
 
 </body>
 </html>

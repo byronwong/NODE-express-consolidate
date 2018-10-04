@@ -25,11 +25,22 @@ NOTES:
 - `npx babel --version` - to check babel is correctly installed
 - `npm babel-node` - to run babel on our build scripts including app.js
 
+- due to incompatibility with nodemon I have stopped using ES6 babel and return to using require.
+
+```js 
+  var express = require('express');
+  var bookRouter = express.Router();
+
+  module.exports = router;
+```
+
 ## Basic React implementation 
 I have add basic react, see html and [these docs](https://reactjs.org/docs/add-react-to-a-website.html)
 
+## Routes
+GET - using query
+http://localhost:8000/api?_id=<someid>
 
-
-
-## Things to do
-- Webpack
+GET, POST
+http://localhost:8000/api
+use postman to do a POST request
