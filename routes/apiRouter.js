@@ -25,7 +25,7 @@ let route = function(Book) {
     // santiize query
     let query = {};
 
-    if(req.query.genre){
+    if(req.query.genre) {
       query.genre = req.query.genre;
     }
 

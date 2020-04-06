@@ -12,6 +12,21 @@
   };
 ```
 
+## Adding options
+```js 
+  const options = {
+    root: __dirname + '/src/',
+    extensions:  ['html', 'htm']
+  }
+
+  // STATIC SERVER
+  app.use(express.static('src', options));
+
+  // Routing static 
+  app.use('/api', express.static(path.join(__dirname, 'src')));
+
+```
+
 
 ## Serving up static files
 [Static Files](https://expressjs.com/en/starter/static-files.html)
@@ -57,3 +72,15 @@ Node used common JS as a module loader.
 
   // Note: if you can only use one module.exports, but you can add everything to the object
 ```
+
+## Environmental variables
+https://www.youtube.com/watch?v=HRBNeERE5PU
+We sometimes want to hide variables, and ensure these are not shipped to our repo, we can do this with environmental variables. This is useful for storing usernames and passwords for APIs.
+
+- First ensure `.gitignore` has `.env` added.  
+- install `npm i -S dotenv`
+- import `import dotenv from 'dotenv'`;
+- ensure that to add `dotenv.config();` at the top before any env variables are need, includes imported files
+- create `.env` file in root
+- add variables e.g. `USER_NAME=SomeValue` 
+- add placeholder variables into your code using `process.env.USER_NAME`
